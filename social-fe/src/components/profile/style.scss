@@ -1,0 +1,205 @@
+@use '../../styles/colors.scss'as c;
+@use '../../styles/global-style.scss'as g;
+
+
+.profile {
+  &-background {
+    height: 200px;
+    background-color: c.$secondary-color;
+    background-image: linear-gradient(to right, c.$secondary-color, rgb(255, 98, 81));
+    position: sticky;
+    top: 55px;
+    z-index: 99;
+  }
+
+  .profile-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 1024px;
+
+
+    .profile-left {
+      flex: 1;
+      background-color: c.$primary-color;
+      position: sticky;
+      height: max-content;
+      top: 255px;
+      margin: 5px 5px;
+      box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+      z-index: 100;
+
+      &-picture {
+        position: relative;
+        overflow: hidden;
+        margin-top: -50px;
+        z-index: 100;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 10;
+
+
+        .hover-upload-picuture {
+          display: none;
+          position: absolute;
+          top: 0;
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          background-color: rgba(233, 17, 17, 0.94);
+
+          .mdi {
+            color: c.$color-green;
+            font-size: 30px;
+            cursor: pointer;
+          }
+        }
+
+        &:hover {
+          .hover-upload-picuture {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+          }
+        }
+
+        img {
+          height: 100px;
+          width: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+          border: 5px solid c.$primary-color;
+        }
+      }
+
+      .user-action {
+        display: flex;
+        gap: 10px;
+        padding: 10px;
+        margin-top: 20px;
+
+        button {
+          border: none;
+          height: 30px;
+          width: 100px;
+          border-radius: 5px;
+          cursor: pointer;
+        }
+
+        .follow {
+          background-color: c.$secondary-color;
+          color: c.$primary-color;
+
+          a {
+            text-decoration: none;
+            color: c.$primary-color;
+          }
+        }
+
+        .setting {
+          background-color: c.$primary-color;
+          color: c.$secondary-color;
+          border: 1px solid c.$grey-color;
+        }
+      }
+
+      .people-follow-unfollow {
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 0px 10px;
+
+        .item {
+          .text {
+            font-weight: 400;
+            color: c.$grey-color;
+            font-size: 18px;
+            margin-bottom: 5px;
+          }
+
+          .number {
+            font-weight: bold;
+            font-size: 18px;
+          }
+        }
+      }
+
+      .user-details {
+        margin-top: 10px;
+        padding: 10px;
+
+        .item {
+          padding: 5px;
+          display: flex;
+          align-items: center;
+
+          .mdi {
+            color: c.$grey-color;
+          }
+
+          .text {
+            font-size: 13px;
+            margin: 0px 5px;
+            text-transform: capitalize;
+          }
+        }
+      }
+    }
+
+    .profile-center {
+      margin: 0px 20px;
+      margin-top: 5px;
+
+    }
+
+    .profile-right {
+      margin-top: 5px;
+      flex: 2;
+      position: sticky;
+      height: calc(100vh - 255px);
+      top: 255px;
+      box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+      width: 100%;
+      margin: 5px 5px;
+      width: 100%;
+
+    }
+  }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+  .profile {
+    background-color: yellow;
+
+    .profile-container {
+      width: 100%;
+
+      .profile-right {
+        display: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .profile {
+    .profile-container {
+      width: 100%;
+
+      .profile-center {
+        width: 100%;
+        margin: 0;
+      }
+
+      .profile-right,
+      .profile-left {
+        display: none;
+      }
+    }
+  }
+}

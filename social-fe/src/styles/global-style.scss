@@ -1,0 +1,53 @@
+@use './colors.scss'as c;
+
+
+@mixin flexCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexSpaceBetween {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexVerticalCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexHorizontalCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexEndContent {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@mixin flexSpaceBetweenItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin flexColumnSpaceBetweenItem {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+@mixin flexColumn {
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family:
+    "Helvetica Neue",
+    sans-serif;
+  background-color: c.$background-color;
+}

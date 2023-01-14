@@ -1,0 +1,75 @@
+@use '../../styles/colors.scss'as c;
+@use '../../styles/global-style.scss'as g;
+
+.suggestion-people {
+  background-color: c.$primary-color;
+  @include g.flexColumn();
+
+  &-top {
+    padding: 15px;
+
+    &-dev {
+      font-weight: bold;
+      font-size: 16px;
+    }
+  }
+
+  &-body {
+    border-top: 1px solid c.$grey-color;
+    padding: 5px;
+    @include g.flexColumn();
+
+    &-item {
+      @include g.flexSpaceBetween();
+      width: 100%;
+      padding: 5px;
+
+      .info {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-left: 10px;
+
+        .username {
+          font-weight: bold;
+          font-size: 12px;
+          text-transform: capitalize;
+
+        }
+
+        .position {
+          font-size: 12px;
+          color: c.$grey-color;
+          text-transform: capitalize;
+        }
+      }
+
+      .item {
+        @include g.flexSpaceBetween();
+
+
+
+        img {
+          height: 40px;
+          width: 40px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+
+        .suggestion-people-btn {
+          border: none;
+          padding: 5px;
+          background-color: c.$color-green;
+          color: c.$primary-color;
+          cursor: pointer;
+          border: 1px solid c.$lightgrey-color;
+
+          &:hover {
+            background-color: c.$primary-color;
+            color: c.$secondary-color;
+          }
+        }
+      }
+    }
+  }
+}

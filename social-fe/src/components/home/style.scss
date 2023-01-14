@@ -1,0 +1,46 @@
+@use '../../styles/colors.scss'as c;
+@use '../../styles/global-style.scss'as g;
+
+.home {
+  margin-top: 10px;
+
+  .container {
+    width: 1024px;
+    margin: 0 auto;
+    @include g.flexSpaceBetweenItem();
+
+    .wrapper-home {
+      display: flex;
+      flex-direction: column;
+      flex: 4;
+    }
+  }
+}
+
+@media only screen and (max-width: 900px) {
+
+  .home {
+    margin-top: 10px;
+
+    .container {
+      width: 100%;
+
+      @include g.flexSpaceBetweenItem();
+    }
+  }
+
+  .join-app-wrapper {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .home {
+    .container {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}

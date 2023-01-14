@@ -1,0 +1,47 @@
+@use '../../styles/colors.scss'as c;
+@use '../../styles/global-style.scss'as g;
+
+.leftside {
+  flex: 1;
+  position: sticky;
+  top: 70px;
+  height: calc(100vh - 70px);
+
+  .item-wrapper {
+    .cat {
+      height: 30px;
+      margin-top: 10px;
+      @include g.flexHorizontalCenter();
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+
+      .icon {
+        font-size: 20px;
+        color: c.$secondary-color;
+      }
+
+      .text {
+        font-size: 12px;
+        font-weight: 500;
+        margin: 0px 2px;
+        padding: 10px;
+        color: c.$text-color;
+        transition: all .5s ease-in-out;
+      }
+
+      &:hover {
+        background-color: c.$lightgrey-color;
+
+        .text {
+          color: c.$primary-color;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .leftside {
+    display: none;
+  }
+}

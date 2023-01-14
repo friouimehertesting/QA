@@ -1,0 +1,30 @@
+@use '../../styles/colors.scss'as c;
+@use '../../styles/global-style.scss'as g;
+
+
+.box-create-post {
+  background-color: c.$primary-color;
+  height: 60px;
+  box-shadow: 0 1px 1px rgb(0 0 0 / 4%);
+  border-radius: 3px;
+  width: 100%;
+  margin-top: 15px;
+  padding: 10px;
+
+  .createPost {
+    height: 30px;
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(240, 239, 239);
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+    font-weight: 600;
+  }
+
+  .login-form {
+    text-decoration: none;
+    color: c.$secondary-color;
+  }
+}

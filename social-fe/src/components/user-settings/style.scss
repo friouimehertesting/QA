@@ -1,0 +1,50 @@
+.user-setting-account {
+  background-color: white;
+  height: max-content;
+  width: max-content;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  border: 1px solid lightgray;
+  padding: 10px;
+
+
+  &::after {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    background-color: green;
+    top: -5px;
+    transform: rotate(45deg);
+    left: 50%;
+    background-color: white;
+    z-index: -1;
+    border: 1px solid lightgray;
+  }
+
+  .item-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 5px;
+
+    .text {
+      font-size: 12px;
+    }
+
+    .logout-action {
+      cursor: pointer;
+    }
+
+    .info-name {
+      font-weight: bold;
+      text-transform: capitalize;
+    }
+  }
+
+  .logout {
+    cursor: pointer;
+    background-color: rgb(230, 225, 225);
+  }
+}
